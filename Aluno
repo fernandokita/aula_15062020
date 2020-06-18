@@ -1,0 +1,37 @@
+package aula20200615;
+
+
+public class Aluno {
+
+	private String nomeAluno;
+	
+	private Aluno lider;
+	
+	private ContratoEducacional contratoAluno;
+	
+	public boolean regular = false;
+	
+	// Constructor..
+	public Aluno(String nomeAluno, Aluno lider) {
+		
+		this.nomeAluno = nomeAluno;
+		this.lider = lider;
+	}
+	
+	//---------------------------------
+	public String getNomeAluno() {
+	
+		return nomeAluno;
+	}
+	
+	// pode haver troca de líder..
+	public void setLider(Aluno lider) {
+		
+		this.lider = lider;
+	}
+	
+	public Aluno getLider() {
+		
+		return lider;
+	}
+}
