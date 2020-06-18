@@ -1,0 +1,50 @@
+package aula20200615;
+
+import java.util.ArrayList;
+
+public class Curso {
+
+	private String descricaoCurso;
+	private String codigoCurso;
+	
+	private Funcionario.Coordenador coordenadorCurso;
+	
+	private ArrayList<Turma> arrayListTurma = new ArrayList<Turma>();
+	
+	public Curso(String descricaoCurso, String codigoCurso, Funcionario.Coordenador coordenadorCurso){
+		
+		this.descricaoCurso = descricaoCurso;
+		this.codigoCurso = codigoCurso;
+		
+		if(this.coordenadorCurso == null) {
+			
+			throw new RuntimeException("Ja tem que haver um Coordenador no curso !");
+		}
+		this.coordenadorCurso = coordenadorCurso;
+	}
+	
+	// ---------------------------------------
+	
+	public String getDescricaoCurso() {
+		
+		return descricaoCurso;
+	}
+	
+	
+	public String getCodigoCurso() {
+		
+		return codigoCurso;
+	}
+	
+	// ---------------------------------------
+	
+	public void addTurma(Turma t) {
+		
+		this.arrayListTurma.add(t);
+	}
+	
+	public ArrayList<Turma> getTurmas(){
+		
+		return arrayListTurma;
+	}
+}
