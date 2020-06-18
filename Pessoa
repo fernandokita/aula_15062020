@@ -1,0 +1,67 @@
+package aula20200615;
+
+
+public class Pessoa {
+
+	private String primeiroNome;
+	private String sobrenome;
+	private int dataNascimento;
+	private String logradouro;
+	private String cidade;
+	private String estado;
+	
+	public Pessoa(String primeiroNome, String sobrenome, int dataNascimento, String logradouro, String cidade, String estado) {
+		
+		this.primeiroNome = primeiroNome;
+		this.sobrenome = sobrenome;
+		this.dataNascimento = dataNascimento;
+		this.logradouro = logradouro;
+		this.cidade = cidade;
+		this.estado = estado;
+	}
+	
+	//------------------------------------------
+	
+	public String getPrimeiroNome() {
+		
+		return primeiroNome;
+	}
+	
+	public String getsobrenome() {
+		
+		return sobrenome;
+	}
+	
+	public int getDataNascimento() {
+		
+		return dataNascimento;
+	}
+	
+	// a pessoa pode mudar de endereço..
+	public void setLogradouro(String logradouro) {
+		
+		this.logradouro = logradouro;
+	}
+	
+	public String getLogradouro() {
+		
+		return logradouro;
+	}
+	
+	
+	// a pessoa pode residir em outra cidade..
+	public void setCidade(String cidade) {
+		
+		this.cidade = cidade;
+	}
+	
+	public String getCidade() {
+		
+		return cidade;
+	}
+	
+	public String getEstado() {
+		
+		return estado;
+	}
+}
