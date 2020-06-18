@@ -1,0 +1,62 @@
+package aula20200615;
+
+public class Funcionario {
+
+	private String nome;
+
+	// Constructor
+	public Funcionario(String nome) {
+
+		this.nome = nome;
+	}
+
+	public String getNome() {
+
+		return nome;
+	}
+
+	// ------------------------------------------------
+
+	public class Coordenador extends Funcionario {
+
+		private Curso coordenarCurso;
+
+		// Construtor do coordenador..
+		public Coordenador(String nome) {
+
+			super(nome);
+		}
+
+		public String getNome() {
+
+			return nome;
+		}
+
+		// Pode ocorrer mudanças nas coordenações dos Cursos
+		public void setCoordenarCurso(Curso coordenarCurso) {
+
+			this.coordenarCurso = coordenarCurso;
+		}
+
+		public Curso setCoordenarCurso() {
+
+			return coordenarCurso;
+		}
+
+		// ------------------------------------------------
+
+		public class Professor extends Funcionario {
+
+			// Construtor do Professor
+			public Professor(String nome) {
+
+				super(nome);
+			}
+
+			public String getNome() {
+
+				return nome;
+			}
+		}
+	}
+}
