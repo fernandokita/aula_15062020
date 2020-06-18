@@ -1,0 +1,63 @@
+package aula20200615;
+
+import java.util.ArrayList;
+
+public class ContratoEducacional {
+
+	private int dataContrato;
+	
+	private Aluno aluno;
+	
+	private ArrayList<Pessoa> arrayListFiador = new ArrayList<Pessoa>();
+	
+	boolean regular = false;
+	
+	// Constructor 
+	public ContratoEducacional(int dataContrato, Aluno aluno, ArrayList<Pessoa> arrayListFiador) {
+		
+		this.dataContrato = dataContrato;
+		
+		if(this.aluno == null) {
+			
+			throw new RuntimeException("No contrato não pode faltar o aluno !");
+		}
+		this.aluno = aluno;
+		
+		if(this.arrayListFiador == null) {
+			
+			throw new RuntimeException("No contrato exige pelo menos 1 fiador");
+		}	
+		this.arrayListFiador = arrayListFiador;
+	}
+	
+	//------------------------------------
+	
+	public void setDataContrato(int dataContrato) {
+		
+		this.dataContrato = dataContrato;
+	}
+	
+	public int getDataContrato() {
+		
+		return dataContrato;
+	}
+	
+	public Aluno getAlunoContrato() {
+		
+		return aluno;
+	}
+	
+
+	//------------------------------------------
+	
+	// Adicionando fiadores ao contrato..
+	public void addFiador(Pessoa f) {
+		
+		this.arrayListFiador.add(f);
+	}
+	
+	public ArrayList<Pessoa> getFiador(){
+		
+		return arrayListFiador;
+	}
+}
