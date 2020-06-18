@@ -1,0 +1,41 @@
+package aula20200615;
+
+import java.util.ArrayList;
+
+public class Turma {
+
+	private String descricaoTurma;
+	private String codigoTurma;
+	
+	private ArrayList<Aluno> arrayListAluno = new ArrayList<Aluno>();
+	
+	public Turma(String descricaoTurma, String codigoTurma) {
+		
+		this.descricaoTurma = descricaoTurma;
+		this.codigoTurma = codigoTurma;
+	}
+	
+	//--------------------------------------
+	
+	public String getDescricaoTurma() {
+		
+		return descricaoTurma;
+	}
+	
+	public String getCodigoTurma() {
+		
+		return codigoTurma;
+	}
+	
+	//--------------------------------------
+	
+	public void addAluno(Aluno a) {
+		
+		this.arrayListAluno.add(a);
+	}
+	
+	public ArrayList<Aluno> getAlunos(){
+		
+		return arrayListAluno;
+	}
+}
